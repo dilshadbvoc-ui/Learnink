@@ -60,7 +60,7 @@ export default function Hero() {
                     <h1 className="text-6xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tight text-slate-900">
                         Rebuild <br />
                         <span className="text-slate-900">Your</span> <br />
-                        <span className="bg-gradient-to-r from-[#FF7E5F] via-[#D45087] to-[#4A90E2] bg-clip-text text-transparent animate-gradient-x bg-[length:200%_auto]">Career</span>
+                        <span className="bg-gradient-to-r from-[#5B4B9E] via-[#7B6BB8] to-[#4A90E2] bg-clip-text text-transparent animate-gradient-x bg-[length:200%_auto]">Career</span>
                     </h1>
 
                     <p className="text-lg lg:text-xl text-slate-600 font-medium mb-12 leading-relaxed max-w-md">
@@ -87,8 +87,8 @@ export default function Hero() {
 
                 {/* Right Visuals (Floating Cubes Imitation) */}
                 <div className="relative h-[600px] hidden lg:block perspective-1000">
-                    {/* Orange Box */}
-                    <Cube className="bg-[#FF7E5F] top-1/4 right-1/4 z-20" size={120} />
+                    {/* Violet Box */}
+                    <Cube className="bg-[#5B4B9E] top-1/4 right-1/4 z-20" size={120} />
 
                     {/* Blue Box */}
                     <Cube className="bg-[#4A90E2] top-1/2 right-[10%] z-10" size={80} />
@@ -106,7 +106,7 @@ export default function Hero() {
                         transition={{ duration: 8, repeat: Infinity }}
                     />
                     <motion.div
-                        className="absolute bottom-40 right-[45%] w-24 h-24 bg-[#FEB692] rounded-xl z-0"
+                        className="absolute bottom-40 right-[45%] w-24 h-24 bg-[#9B8BC8] rounded-xl z-0"
                         animate={{ y: [0, -30, 0], rotate: [0, -5, 0] }}
                         transition={{ duration: 7, delay: 1, repeat: Infinity }}
                     />

@@ -312,7 +312,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-gradient-to-br from-primary to-primary-dark text-white relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_#FF7E5F] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-all before:duration-500 hover:before:left-full py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl hover:shadow-primary/30 disabled:opacity-70 text-base"
+                                className="w-full bg-gradient-to-br from-primary to-primary-dark text-white relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_#5B4B9E] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-all before:duration-500 hover:before:left-full py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl hover:shadow-primary/30 disabled:opacity-70 text-base"
                             >
                                 {isSubmitting ? (
                                     <Loader2 className="animate-spin" size={20} />

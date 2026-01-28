@@ -3,8 +3,8 @@
 @theme {
     --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-    --color-primary: #FF7E5F;
-    --color-primary-dark: #eb6f50;
+    --color-primary: #5B4B9E;
+    --color-primary-dark: #4A3D82;
     --color-secondary: #4A90E2;
 
     --animate-float: float 6s ease-in-out infinite;

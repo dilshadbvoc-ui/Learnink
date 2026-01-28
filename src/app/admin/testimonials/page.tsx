@@ -131,7 +131,7 @@ export default function AdminTestimonials() {
                                     <div className="flex-1">
                                         <div className="flex items-center gap-3 mb-2">
                                             <h4 className="font-black text-slate-800">{item.name}</h4>
-                                            <div className="flex text-orange-400"><Star size={12} className="fill-current" /></div>
+                                            <div className="flex text-violet-500"><Star size={12} className="fill-current" /></div>
                                         </div>
                                         <p className="text-slate-500 text-sm italic">&quot;{item.content}&quot;</p>
                                     </div>
