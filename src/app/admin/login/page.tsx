@@ -23,10 +23,14 @@ export default function AdminLogin() {
             redirect: false,
         });
 
+        console.log("SignIn Result:", res); // Debug log
+
         if (res?.error) {
+            console.error("SignIn Error:", res.error); // Debug log
             setError("Invalid credentials. Please verify your access.");
             setLoading(false);
         } else {
+            console.log("SignIn Success, redirecting..."); // Debug log
             router.push("/admin");
         }
     };
