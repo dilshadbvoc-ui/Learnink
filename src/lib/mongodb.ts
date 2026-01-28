@@ -37,7 +37,10 @@ async function dbConnect() {
     }
 
     try {
+        console.log('Connecting to MongoDB...');
+        const start = Date.now();
         cached!.conn = await cached!.promise;
+        console.log(`MongoDB connected in ${Date.now() - start}ms`);
     } catch (e) {
         cached!.promise = null;
         throw e;
