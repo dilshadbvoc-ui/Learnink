@@ -1,0 +1,9 @@
+Starting seed script...
+[2026-01-28T10:25:04.824Z] Raw URI structure: mongodb+srv:****@learnink.09tyeip.mongodb.net/?appName
+[2026-01-28T10:25:04.826Z] Appending value to incomplete appName parameter...
+[2026-01-28T10:25:04.827Z] Connecting to MongoDB at: mongodb+srv://dilsha...
+[2026-01-28T10:25:05.754Z] Connected.
+[2026-01-28T10:25:05.776Z] Checking for user: admin
+[2026-01-28T10:25:05.851Z] Creating user: admin
+[2026-01-28T10:25:06.098Z] User 'admin' created successfully.
+[2026-01-28T10:25:06.104Z] Done.

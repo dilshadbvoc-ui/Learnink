@@ -131,4 +131,14 @@ const IntegrationConfigSchema = new Schema({
     enabled: { type: Boolean, default: false },
 }, { timestamps: true });
 
+
+// --- User Model (Admin Auth) ---
+const UserSchema = new Schema({
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String, default: 'admin', enum: ['admin', 'editor'] },
+}, { timestamps: true });
+
+export const User = models.User || model('User', UserSchema);
+
 export const IntegrationConfig = models.IntegrationConfig || model('IntegrationConfig', IntegrationConfigSchema);

@@ -1,5 +1,8 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextAuthOptions } from "next-auth";
+import dbConnect from "@/lib/mongodb";
+import { User } from "@/lib/models";
+import bcrypt from "bcryptjs";
 
 export const authOptions: NextAuthOptions = {
     providers: [
@@ -10,13 +13,29 @@ export const authOptions: NextAuthOptions = {
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials) {
-                const adminUser = process.env.ADMIN_USER || "admin";
-                const adminPass = process.env.ADMIN_PASS || "admin123";
+                await dbConnect();
 
-                if (credentials?.username === adminUser && credentials?.password === adminPass) {
-                    return { id: "1", name: "Administrator", role: "admin" };
+                if (!credentials?.username || !credentials?.password) {
+                    return null;
                 }
-                return null;
+
+                const user = await User.findOne({ username: credentials.username });
+
+                if (!user) {
+                    return null;
+                }
+
+                const isValid = await bcrypt.compare(credentials.password, user.password);
+
+                if (!isValid) {
+                    return null;
+                }
+
+                return {
+                    id: user._id.toString(),
+                    name: user.username,
+                    role: user.role
+                };
             }
         })
     ],
