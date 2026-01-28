@@ -22,7 +22,8 @@ export async function GET() {
         }
 
         return NextResponse.json(JSON.parse(JSON.stringify(config)));
-    } catch {
+    } catch (e) {
+        console.error("SEO API Error:", e);
         return NextResponse.json(
             { error: "Failed to fetch SEO settings" },
             { status: 500 }

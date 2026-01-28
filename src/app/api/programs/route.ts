@@ -9,7 +9,8 @@ export async function GET() {
     try {
         const programs = await Program.find({}).sort({ createdAt: -1 }).lean();
         return NextResponse.json(JSON.parse(JSON.stringify(programs)));
-    } catch {
+    } catch (e) {
+        console.error("Programs API Error:", e);
         return NextResponse.json({ error: "Failed to fetch programs" }, { status: 500 });
     }
 }

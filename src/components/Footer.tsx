@@ -78,7 +78,7 @@ export default function Footer() {
 
     return (
         <footer className="mt-auto bg-[#0f172a] text-slate-300 py-24 px-6 relative z-10 overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[url('/background-grid.svg')] opacity-5 pointer-events-none"></div>
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
 
